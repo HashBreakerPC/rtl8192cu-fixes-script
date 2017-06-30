@@ -8,4 +8,4 @@ sudo chmod +x rtl8192cu-fix-script.sh
 ./rtl8192cu-fix-script.sh
 
 ```
-@github.com/pvaret Thank you so much for these drivers
+@pvaret Thank you so much for these drivers
