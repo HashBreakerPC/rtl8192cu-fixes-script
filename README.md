@@ -1,2 +1,11 @@
 # rtl8192cu-fixes-script
-Scripts to automatically install or remove rtl8192cu-fixes drivers
+## Script for Debian based
+> To install it:
+```
+git clone https://github.com/HashBreakerPC/rtl8192cu-fixes-script.git 
+cd rtl8192cu-fixes-script/
+sudo chmod +x rtl8192cu-fix-script.sh
+./rtl8192cu-fix-script.sh
+
+```
+@github.com/pvaret Thank you so much for these drivers
