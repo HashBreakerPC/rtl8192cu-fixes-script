@@ -61,7 +61,7 @@ dri=`sudo dkms status 8192cu/1.10 | grep -o 'installed'`
 if [[ "$dri" == "installed" ]]; then
 	read -p "This driver is already installed, do you want to remove it now? [y/n]: " un
 	if [[ "$un" == "y" ]]; then
-		sudo -n dkms uninstall 8192cu/1.10 --all
+		sudo -n dkms uninstall 8192cu/1.11 --all
 		rm -f /etc/modprobe.d/blacklist-native-rtl8192.conf 2>/dev/null
 		rm -f /etc/modprobe.d/8192cu-disable-power-management.conf 2>/dev/null
 		echo "The driver was removed"
@@ -83,7 +83,7 @@ if ping -c 1 google.com >> /dev/null 2>&1; then
 		git clone https://github.com/pvaret/rtl8192cu-fixes.git
 		sudo -p "Enter you user password: " dkms add ./rtl8192cu-fixes
 		sleep 1
-		sudo -n dkms install 8192cu/1.10
+		sudo -n dkms install 8192cu/1.11
 		sleep 1
 		sudo -n depmod -a
 		sleep 1
