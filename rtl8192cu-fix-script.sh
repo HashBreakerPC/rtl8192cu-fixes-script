@@ -57,7 +57,7 @@ for i in `seq 0 3`; do
 	sleep 1
 	done
 #check old installation whith dkms
-dri=`sudo dkms status 8192cu/1.10 | grep -o 'installed'`
+dri=`sudo dkms status 8192cu/1.11 | grep -o 'installed'`
 if [[ "$dri" == "installed" ]]; then
 	read -p "This driver is already installed, do you want to remove it now? [y/n]: " un
 	if [[ "$un" == "y" ]]; then
