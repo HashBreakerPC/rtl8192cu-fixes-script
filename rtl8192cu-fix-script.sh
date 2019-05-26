@@ -61,7 +61,7 @@ dri=`sudo dkms status 8192cu/1.11 | grep -o 'installed'`
 if [[ "$dri" == "installed" ]]; then
 	read -p "This driver is already installed, do you want to remove it now? [y/n]: " un
 	if [[ "$un" == "y" ]]; then
-		sudo -n dkms uninstall 8192cu/1.11 --all
+		sudo -n dkms uninstall 8192cu/1.11
 		rm -f /etc/modprobe.d/blacklist-native-rtl8192.conf 2>/dev/null
 		rm -f /etc/modprobe.d/8192cu-disable-power-management.conf 2>/dev/null
 		echo "The driver was removed"
